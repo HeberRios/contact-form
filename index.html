@@ -13,6 +13,8 @@
 
         <link rel="stylesheet" href="./style.css" />
 
+        <script defer src="./main.js"></script>
+
         <title>Frontend Mentor | Contact form</title>
     </head>
     <body>
@@ -60,6 +62,7 @@
                             type="radio"
                             name="query-type"
                             id="general-enquiry"
+                            value="general"
                         />
                         <label for="general-enquiry">general enquiry</label>
                     </div>
@@ -69,6 +72,7 @@
                             type="radio"
                             name="query-type"
                             id="support-request"
+                            value="support"
                         />
                         <label for="support-request">support request</label>
                     </div>
@@ -79,7 +83,12 @@
 
                 <div class="input-wrapper">
                     <label for="message">message</label>
-                    <textarea name="message" id="message" class=""></textarea>
+                    <textarea
+                        maxlength="300"
+                        name="message"
+                        id="message"
+                        class=""
+                    ></textarea>
                     <span aria-live="polite" class="error-message"
                         >This field is required</span
                     >
@@ -91,6 +100,7 @@
                             type="checkbox"
                             name="consent-contact"
                             id="consent-contact"
+                            value="consent"
                         />
                         <label for="consent-contact">
                             I consent to being contacted by the team

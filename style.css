@@ -296,12 +296,15 @@ input[type="radio"]:focus {
     display: block;
 }
 
-input.error-active {
+input.error-active,
+textarea.error-active {
     box-shadow: 0 0 0 1px var(--clr-red);
 }
 
 input.error-active:focus,
-input.error-active:hover {
+input.error-active:hover,
+textarea.error-active:focus,
+textarea.error-active:hover {
     outline: 0.125rem solid var(--clr-red);
 }
 
