@@ -10,6 +10,7 @@ const queryTypeRadioBtns = [generalEnquiryInput, supportRequestInput];
 const messageInput = document.querySelector("#message");
 const contactInput = document.querySelector("#consent-contact");
 const submitBtn = document.querySelector("#submit-btn");
+const successWindow = document.querySelector(".success-window");
 
 // REGULAR EXPRESSIONS FOR INPUT VALIDATIONS
 const nameRegex = /^[A-Za-z\s]{2,30}$/;
@@ -155,6 +156,23 @@ function validateForm() {
     return allInputsAreValid;
 }
 
+function resetAllInputValues() {
+    firstNameInput.value = "";
+    lastNameInput.value = "";
+    emailInput.value = "";
+    resetRadioBtns();
+    messageInput.value = "";
+    contactInput.checked = false;
+}
+
+function toggleSuccessWindow() {
+    successWindow.classList.toggle("active");
+}
+
+function moveToTopOfThePage() {
+    globalThis.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+}
+
 firstNameInput.addEventListener("input", firstNameValidation);
 
 lastNameInput.addEventListener("input", lastNameValidation);
@@ -173,7 +191,11 @@ submitBtn.addEventListener("click", function (e) {
     e.preventDefault();
 
     if (validateForm()) {
+        toggleSuccessWindow();
+        resetAllInputValues();
+        moveToTopOfThePage();
+        setTimeout(toggleSuccessWindow, 3500);
     }
 });
 
-resetRadioBtns();
+resetAllInputValues();
