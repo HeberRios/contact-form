@@ -138,6 +138,7 @@ h1 {
 /* FORM CONTAINER STYLES */
 
 .form-container {
+    position: relative;
     max-width: 34.375rem;
     width: 100%;
     display: flex;
@@ -241,7 +242,7 @@ input:focus,
 textarea:focus,
 input:hover,
 textarea:hover {
-    outline: 2px solid var(--clr-green);
+    outline: 0.125rem solid var(--clr-green);
     cursor: pointer;
 }
 
@@ -258,7 +259,7 @@ input[type="radio"]:hover,
 input[type="radio"]:focus,
 input[type="checkbox"]:hover,
 input[type="checkbox"]:focus {
-    outline-offset: 1px;
+    outline-offset: 0.0625rem;
 }
 
 input[type="radio"]:hover,
@@ -272,7 +273,7 @@ input[type="radio"]:focus {
 
 .radio-input-wrapper:has(*:hover),
 .radio-input-wrapper:focus-within {
-    outline: 2px solid var(--clr-green);
+    outline: 0.125rem solid var(--clr-green);
 }
 
 .submit-button:focus,
@@ -280,7 +281,7 @@ input[type="radio"]:focus {
     color: var(--clr-green);
     background-color: var(--clr-light-green);
     cursor: pointer;
-    outline: 2px solid var(--clr-green);
+    outline: 0.125rem solid var(--clr-green);
 }
 
 /* ERROR STYLES */
@@ -298,7 +299,7 @@ input[type="radio"]:focus {
 
 input.error-active,
 textarea.error-active {
-    box-shadow: 0 0 0 1px var(--clr-red);
+    box-shadow: 0 0 0 0.0625rem var(--clr-red);
 }
 
 input.error-active:focus,
@@ -308,9 +309,51 @@ textarea.error-active:hover {
     outline: 0.125rem solid var(--clr-red);
 }
 
+/* SUCCESS WINDOW STYLES */
+
+.success-window {
+    max-width: 28.125rem;
+    position: absolute;
+    width: 80%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 10%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: var(--clr-dark-grey);
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    color: var(--clr-white);
+    display: none;
+}
+
+.success-window.active {
+    display: flex;
+}
+
+.message-title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.success-icon {
+    width: 1.125rem;
+}
+
+.message-title {
+    font-size: 1.25rem;
+}
+
+.success-window p:last-child {
+    color: var(--clr-light-green);
+    font-size: clamp(0.875rem, 2dvw, 1rem);
+}
+
 @media (min-width: 48rem) {
     body {
-        padding: 3rem;
+        padding: 6rem 3rem;
     }
 
     .form-container {
@@ -357,5 +400,9 @@ textarea.error-active:hover {
 
     .form-container > :last-child {
         grid-column: 1/-1;
+    }
+
+    .success-window {
+        transform: translate(-50%, 50%);
     }
 }
