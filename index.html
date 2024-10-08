@@ -21,17 +21,36 @@
                 <h1>contact us</h1>
                 <div class="input-wrapper">
                     <label for="first-name"> first name</label>
-                    <input type="text" name="first-name" id="first-name" />
+                    <input
+                        type="text"
+                        name="first-name"
+                        id="first-name"
+                        class=""
+                    />
+                    <span aria-live="polite" class="error-message"
+                        >This field is required</span
+                    >
                 </div>
 
                 <div class="input-wrapper">
                     <label for="last-name">last name</label>
-                    <input type="text" name="last-name" id="last-name" />
+                    <input
+                        type="text"
+                        name="last-name"
+                        id="last-name"
+                        class=""
+                    />
+                    <span aria-live="polite" class="error-message"
+                        >This field is required</span
+                    >
                 </div>
 
                 <div class="input-wrapper">
                     <label for="email">email address</label>
-                    <input type="email" name="email" id="email" />
+                    <input type="email" name="email" id="email" class="" />
+                    <span aria-live="polite" class="error-message"
+                        >This field is required</span
+                    >
                 </div>
 
                 <div class="input-wrapper">
@@ -53,22 +72,35 @@
                         />
                         <label for="support-request">support request</label>
                     </div>
+                    <span aria-live="polite" class="error-message"
+                        >This field is required</span
+                    >
                 </div>
 
                 <div class="input-wrapper">
                     <label for="message">message</label>
-                    <textarea name="message" id="message"></textarea>
+                    <textarea name="message" id="message" class=""></textarea>
+                    <span aria-live="polite" class="error-message"
+                        >This field is required</span
+                    >
                 </div>
 
                 <div class="consent-container">
-                    <input
-                        type="checkbox"
-                        name="consent-contact"
-                        id="consent-contact"
-                    />
-                    <label for="consent-contact">
-                        I consent to being contacted by the team
-                    </label>
+                    <div class="consent-input-wrapper">
+                        <input
+                            type="checkbox"
+                            name="consent-contact"
+                            id="consent-contact"
+                        />
+                        <label for="consent-contact">
+                            I consent to being contacted by the team
+                        </label>
+                    </div>
+
+                    <span class="error-message"
+                        >To submit this form, please consent being
+                        contacted</span
+                    >
                 </div>
 
                 <button

@@ -165,17 +165,23 @@ h1 {
 
 .consent-container {
     display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.consent-input-wrapper {
+    display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.consent-container > label {
+.consent-input-wrapper > label {
     font-size: 0.9375rem;
 }
 
 .input-wrapper > label:first-child::after,
 .input-wrapper > p.query-type-label::after,
-.consent-container > label::after {
+.consent-input-wrapper > label::after {
     content: " *";
     color: var(--clr-green);
     font-weight: var(--fw-bold);
@@ -275,6 +281,28 @@ input[type="radio"]:focus {
     background-color: var(--clr-light-green);
     cursor: pointer;
     outline: 2px solid var(--clr-green);
+}
+
+/* ERROR STYLES */
+
+.error-message {
+    display: none;
+    font-size: 0.8125rem;
+    color: var(--clr-red);
+    font-weight: var(--fw-bold);
+}
+
+.error-message.error-active {
+    display: block;
+}
+
+input.error-active {
+    box-shadow: 0 0 0 1px var(--clr-red);
+}
+
+input.error-active:focus,
+input.error-active:hover {
+    outline: 0.125rem solid var(--clr-red);
 }
 
 @media (min-width: 48rem) {
