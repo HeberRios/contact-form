@@ -40,8 +40,8 @@ Users should be able to:
 
 ### Links
 
--   [Solution URL]()
--   [Live Site URL]()
+-   [Solution URL](https://www.frontendmentor.io/solutions/contact-form-L11n5CQwpU)
+-   [Live Site URL](https://heberrios.github.io/contact-form/)
 
 ## My process
 
