@@ -1,6 +1,7 @@
 "use strict";
 
 // SELECTING ELEMENTS
+const contactForm = document.querySelector("#contact-form");
 const firstNameInput = document.querySelector("#first-name");
 const lastNameInput = document.querySelector("#last-name");
 const emailInput = document.querySelector("#email");
@@ -187,7 +188,7 @@ messageInput.addEventListener("input", messageValidation);
 
 contactInput.addEventListener("input", contactConsentValidation);
 
-submitBtn.addEventListener("click", function (e) {
+contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
     if (validateForm()) {
